@@ -60,9 +60,9 @@ function App() {
       <Navbar />
      <section class="bg-indigo-700 text-white">
   <div
-    class="mx-auto max-w-screen-xl px-4 py-32 lg:flex lg:h-screen lg:items-center"
+    class="mx-auto max-w-screen-xl px-4 py-32  lg:h-screen lg:items-center"
   >
-    <div class="mx-auto max-w-3xl text-center">
+    <div class="mx-auto max-w-3xl text-center mt-24">
       <h1
         class="text-3xl font-extrabold text-white sm:text-5xl"
       >
@@ -72,14 +72,17 @@ function App() {
       </h1>
 
       <p class="mx-auto mt-4 max-w-xl sm:text-xl sm:leading-relaxed">
+        
        Poursuivre l'état d'avancement des étudiant, veuillez activer la caméra pour passer en mode AR sur le plan IGN
+       ensuite scroller en bas pour voir la caméra.
       </p>
 
       <div class="mt-8 flex flex-wrap justify-center gap-4">
       
-          {!started && <button  class="block w-full rounded border border-indigo-900 bg-indigo-900 px-12 py-3 text-sm font-medium text-white hover:bg-indigo-800 hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" onClick={changeValue}>Start</button>}
+          {!started && <button   class="block w-full rounded border border-indigo-900 bg-indigo-900 px-12 py-3 text-sm font-medium text-white hover:bg-indigo-800 hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto" onClick={changeValue}><a href="#camerawowo">Activer Caméra</a></button>}
        {started && (
           <button
+          class="block w-full rounded border border-indigo-900 bg-indigo-900 px-12 py-3 text-sm font-medium text-white hover:bg-indigo-800 hover:text-white focus:outline-none focus:ring active:text-opacity-75 sm:w-auto"
             onClick={() => {
               setStarted(false);
              
@@ -94,9 +97,9 @@ function App() {
         >
           Mode Normal
         </a>
-      </div>
+      </div >
  {started && (
-        <div className="container">
+        <div className="container"  id="camerawowo">
           {/* <MindARViewer/> */}
           <ModeViewAR
             newdX={x}

@@ -201,10 +201,7 @@ const ModeViewAR = (props) => {
         </a-box> */}
        
         {/* <a-box id="box" color={`${color}`} depth="0.5" height="0.5" width="0.25" position="0 0 0" class="clickable" ></a-box> */}
-        {isClick ? 
-          <a-circle id="btnCall" color="black" src="#tele" radius="0.025" position="0.25 0.25 0" class="clickable" ></a-circle> : null }   
-        {isClick ? 
-          <a-circle id="btnSms" color="black" src="#sms" radius="0.025" position="0.35 0.25 0"  class="clickable"></a-circle> : null }   
+         
         
 
 
@@ -263,14 +260,20 @@ const ModeViewAR = (props) => {
         {/* perso 1 */}
         <a-gltf-model
           rotation="0 0 0 "
-          position="-1 0 0.5"
+          // position="-1 0 0.1"
+          position="-0.25 0 0.1"
           scale="0.001 0.001 0.001"
           src="#avatarModel"
           class="clickable"
           id="box"
           // animation={`property: position; from: ${x1} ${y1} ${z1} ; to: ${x2} ${y2} ${z2};dur:${speed}; easing: easeInOutQuad; loop: true; dir: alternate`}
-          animation={`property: position; from: -0.5 0 0.5 ; to: -0 0 0.5;dur:${speed}; easing: easeInOutQuad; loop: true; dir: alternate`}
+          // animation={`property: position; from: -0.5 0 0.5 ; to: -0 0 0.5;dur:${speed}; easing: easeInOutQuad; loop: true; dir: alternate`}
         ></a-gltf-model>
+
+        {isClick ? 
+          <a-circle id="btnCall" color="black" src="#tele" radius="0.025" position="-0.25 0.15 0.1" class="clickable" ></a-circle> : null }   
+        {isClick ? 
+          <a-circle id="btnSms" color="black" src="#sms" radius="0.025" position="-0.40 0.15 0.1"  class="clickable"></a-circle> : null } 
 
         {/* {person.data.map((record) => {
           {
